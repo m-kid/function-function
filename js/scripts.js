@@ -1,17 +1,20 @@
 
 
-var a = prompt ('podaj dowolną liczbę')
-    b = 4,
-    value = (a*a) + (2 * a * b) - (b*b);
-
-console.log('wynik podniesienia Twojej liczby, czyli ' + a + ' do kwadratu, a następnie pomnożenia jej przez tajemniczą liczbę i jeszcze innych zabiegów daje ');
-
-console.log(value)
-
-if (value > 0) {
-    console.log('dodatnia')
-} else if (value < 0) {
-    console.log('ujemna')
+function getTriangleArea (a, h) {
+    
+if (a > 0 && h > 0) {
+    var value = a * h / 2
+} else if (a < 0 || h < 0) {
+    var value = 'błędne dane'
 } else {
-    console.log('zero')
+    var value = 'zero'
 }
+    
+    return value;  
+}
+
+var triangleArea = getTriangleArea(10,10);
+var triangleArea = getTriangleArea(20, 10);
+var triangleArea = getTriangleArea(0, 0);
+
+console.log (getTriangleArea(-10, 10))
